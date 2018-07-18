@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+  <div class="control">
+    <div class="layout">
+      <div>
+        <input name="layout" type="radio" id="TSFixed">
+        <label for="TSFixed">两栏3/7布局</label>
+      </div>
+      <div>
+        <input name="layout" type="radio" id="LFixed">
+        <label for="LFixed">两栏左固定</label>
+      </div>
+      <div>
+        <input name="layout" type="radio" id="RFixed">
+        <label for="RFixed">两栏右固定</label>
+      </div>
+      <div>
+        <input name="layout" type="radio" id="LRFixed">
+        <label for="LRFixed">三栏左右固定</label>
+      </div>
+      <div>
+        <input name="layout" type="radio" id="LCFixed">
+        <label for="LCFixed">三栏左中固定</label>
+      </div>
+    </div>
+    <div class="pattern">
+      <div>
+        <input type="radio" name="pattern" id="flexL" disabled>
+        <label for="flexL">flex布局</label>
+      </div>
+      <div>
+        <input type="radio" name="pattern" id="floatL" disabled>
+        <label for="floatL">float布局</label>
+      </div>
+      <div>
+        <input type="radio" name="pattern" id="inlineL" disabled>
+        <label for="inlineL">inlineBlock布局</label>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="empty">empty...</div>
+  </div>
+  <template id="temp">
+    <div id="container">
+      <header>header</header>
+      <div id="content"></div>
+      <footer>footer</footer>
+    </div>
+    <div id="subs">I’m honored to be with you here today for your commencement from one of the finest universities in the world. Truth be told, I never graduated from college and this is the closest I’ve ever gotten to a college graduation. Today I want to tell you three stories from my life. That’s it. No big deal, just three stories.
+
+    The first story is about connecting the dots. I dropped out of Reed College after the first six months, but then stayed around as a drop in for another eighteen months or so before I really quit. So why’d I drop out? It started before I was born. My biological mother was a young unwed graduate student and she decided to put me up for adoption. She felt very strongly that I should be adopted by college graduates, so everything was all set for me to be adopted at birth by a lawyer and his wife. Except that when I popped out they decided at the last minute that they really wanted a girl. So my parents, who were on a waiting list, got a call in the middle of the night asking, “We’ve got an unexpected baby boy, do you want him?” They said, “Of course.” My biological mother found out later that my mother had never graduated from college and that my father had never graduated from high school. She refused to sign the final adoption papers. She only relented a few months later when my parents promised that I would go to college.
+
+    This was the start in my life, and seventeen years later I did go to college. But I naively chose a college that was almost as expensive as Stanford and all of my working class parents’ savings were being spent on my college tuition. After six months, I couldn’t see the value in it. I had no idea what I wanted to do with my life and no idea how college was going to help me figure it out. And here I was spending all the money my parents had saved their entire life. So I decided to drop out and trust that it would all work out okay. It was pretty scary at the time but looking back it was one of the best decisions I ever made. The minute I dropped out I could stop taking the required classes that didn’t interest me and begin dropping in on the ones that looked far more interesting.</div>
+    <div id="main">It wasn’t all romantic. I didn’t have a dorm room, so I slept on the floor in friends’ rooms. I returned coke bottles for the five cent deposits to buy food with and I would walk the seven miles across town every Sunday night to get one good meal a week at the Hare Krishna Temple.
+
+    I loved it and much of what I stumbled into by following my curiosity and intuition turned out to be priceless later on. Let me give you one example. Reed College at that time offered perhaps the best calligraphy instruction in the country. Throughout the campus every poster, every label on every drawer was beautifully had caligraphed. Because I had dropped out and didn’t have to take the normal classes I decided to take a calligraphy class to learn how to do this. I learned about serif and sanserif typefaces, about varying the amount of space between different letter combinations, about what makes great typography great. It was beautiful, historical, artistically subtle in a way that science can’t capture and I found it fascinating.
+
+    None of this had even a hope of any practical application in my life but ten years later when we were designing the first Macintosh computer, it all came back to me and we designed it all into the Mac. It was the first computer with beautiful typography. If I had never dropped in on that single course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts and since Windows just copied the Mac it’s likely that no personal computer would have them. If I had never dropped out I would have never dropped in on that calligraphy class and personal computers might not have the wonderful typography that they do. Of course it was impossible to connect the dots looking forward when I was in college but it was very very clear looking backwards, ten years later. Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something, your gut, destiny, life, karma, whatever, because believing that the dots will connect down the road will give you the confidence to follow your heart even when it leads you off the well-worn path and that will make all the difference.
+
+    My second story is about love and loss. I was lucky. I found what I loved to do early in life. Woz and I started Apple in my parents’ garage when I was twenty. We worked hard and in 10 years Apple had grown from just the two of us in a garage into a $2 billion company with over 4000 employees. We had just released our finest creation, the Macintosh, a year earlier, and I had just turned 30. And then I got fired. How can you get fired from a company you started? Well as Apple grew, we hired someone who I thought was very talented to run the company with me and for the first year or so things went well but then our visions of the future began to diverge and eventually we had a falling out. When we did, our Board of Directors sided with him and so at 30 I was out and very publicly out. What had been the focus of my entire adult life was gone, and it was devastating.</div>
+    <div id="aside">I really didn’t know what to do for a few months. I felt that I had let the previous generation of entrepreneurs down, that I had dropped the baton as it was being passed to me. I met with David Packard and Bob Noyce and tried to apologize for screwing up so badly. I was a very public failure, and I even thought about running away from the valley. But something slowly began to dawn on me, I still loved what I did. The turn of events at Apple had not changed that one bit. I had been rejected but I was still in love and so I decided to start over.
+
+    I didn’t see it then, but it turned out that getting fired from Apple was the best thing that could have ever happened to me. The heaviness of being successful was replaced by the lightness of being a beginner again, less sure about everything. It freed me to enter one of the most creative periods of my life.
+
+    During the next five years, I started a company named NeXT, another company named Pixar, and fell in love with an amazing woman who would become my wife. Pixar went on to create the world’s first computer animated feature film, Toy Story, and is now the most successful animation studio in the world. In a remarkable turn of events, Apple bought NeXT, I returned to Apple, and the technology we developed at NeXT is at the heart of Apple’s current renaissance. And Laurene and I have a wonderful family together.
+
+    I’m pretty sure none of this would have happened if I hadn’t been fired from Apple. It was awful tasting medicine, but I guess the patient needed it. Sometimes life is going to hit you in the head with a brick. Don’t lose faith. I’m convinced that the only thing that kept me going was that I loved what I did. You’ve got to find what you love and that is as true for your work as it is for your lovers. Your work is going to fill a large part of your life and the only way to be truly satisfied is to do what you believe is great work and the only way to do great work is to love what you do. If you haven’t found it yet, keep looking and don’t settle. As with all matters of the heart, you’ll know when you find it and like any great relationship, it just gets better and better as the years roll on. So keep looking, don’t settle.</div>
+    <div id="empty">
+      <div class="empty">empty...</div>
+    </div>
+  </template>
+  <script src="layout.js"></script>
+</body>
+</html>

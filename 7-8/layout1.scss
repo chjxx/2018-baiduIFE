@@ -1,0 +1,211 @@
+*{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  transition: inherit;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+  transition: all .1s;
+  padding-bottom: 70px;
+}
+
+header{
+  height: 60px;
+  background-color: rgb(78, 78, 78);
+  .content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+    color: white;
+    .logo{
+      margin-left: 30px;
+      font-size: 25px;
+      line-height: 60px;
+      cursor: default;
+    }
+    .link{
+      margin-right: 30px;
+      list-style: none;
+      font-size: 0;
+      li{
+        font-size: 16px;
+        display: inline-block;
+        background-color: #777;
+        border-radius: 0 0 10px 10px;
+        a{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          color: white;
+          text-decoration: none;
+          text-transform:capitalize;
+        }
+      }
+      li:hover{
+        background-color: #999;
+      }
+      li:not(:last-child){
+        margin-right: 1px;
+      }
+    }
+  }
+}
+
+#banner{
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  .content{
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    list-style: none;
+    top: 0;
+    transition: all 1s;
+    li{
+      float:left;
+      width: 25%;
+      height: 100%;
+    }
+    li:nth-child(1){
+      background: #ccc url('img/slide01.jpg') center/cover no-repeat;
+    }
+    li:nth-child(2){
+      background: #ccc url('img/slide02.jpg') center/cover no-repeat;
+    }
+    li:nth-child(3){
+      background: #ccc url('img/slide03.jpg') center/cover no-repeat;
+    }
+    li:nth-child(4){
+      background: #ccc url('img/slide04.jpg') center/cover no-repeat;
+    }
+    li.content-item_selected{
+    }
+  }
+  .content.content-item1{
+    left: 0;
+  }
+  .content.content-item2{
+    left: -100%;
+  }
+  .content.content-item3{
+    left: -200%;
+  }
+  .content.content-item4{
+    left: -300%;
+  }
+  .control{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 50px;
+    min-width: 300px;
+    list-style: none;
+    bottom: 10px;
+    left: calc(50% + 150px);
+    li{
+      margin: 2px;
+      padding: 5px;
+      background-color: rgba(90%, 90%, 90%, 0.5);
+      cursor: pointer;
+      color: rgba(90%, 90%, 90%, 0.7);
+    }
+    li:hover{
+      background-color: rgba(90%, 90%, 90%, 0.6);
+    }
+    .control-item_selected{
+      padding-top: 15px;
+    }
+  }
+}
+
+#page{
+  position: relative;
+  nav{
+    border-bottom: 1px solid #dcdcdc;
+    ul{
+      display: flex;
+      align-items: flex-end;
+      width: 960px;
+      height: 60px;
+      margin: 0 auto;
+      list-style: none;
+      li{
+        margin-bottom: -1px;
+        padding: 10px 20px;
+        border: 1px solid #dcdcdc;
+        border-radius: 15px 15px 0 0;
+        background-color: #ececec;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      li.control-item_selected{
+        background-color: white;
+        border-color: #dcdcdc #dcdcdc transparent #dcdcdc;
+      }
+      li:not(:first-child){
+        margin-left: -1px;
+      }
+      li.control-item:hover{
+        background-color: white;
+      }
+    }
+  }
+  .content{
+    position: relative;
+    list-style: none;
+    li{
+      width: 960px;
+      margin: 0 auto;
+      display: none;
+      opacity: 0;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      .item{
+        margin: 0 10px 10px 0;
+        flex: 1 1 auto;
+        padding: 80px;
+        border: 1px solid #dcdcdc;
+        text-align: center;
+        cursor: pointer;
+      }
+      .item:hover{
+        background-color: #ededed;
+      }
+    }
+    li.content-item_selected{
+      display: flex;
+      animation: pageShow .2s forwards;
+    }
+  }
+}
+
+footer{
+  position: absolute;
+  padding-top: 15px;
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+  background-color: rgb(102, 102, 102);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@keyframes pageShow{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

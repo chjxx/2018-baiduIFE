@@ -1,0 +1,398 @@
+*{
+  box-sizing: inherit;
+}
+
+body{
+  box-sizing: border-box;
+  min-width: 700px;
+}
+
+.control{
+  margin-top: 20px;
+  border: 1px solid #ededed;
+  color: #767676;
+}
+
+.control .layout,
+.control .pattern{
+  height: 50px;
+  line-height: 50px;
+}
+
+.control>div:not(:last-child){
+  border-bottom: 1px dashed #ededed;
+}
+
+.control .layout>div,
+.control .pattern>div{
+  display: inline-block;
+}
+
+.control input{
+  display: none;
+}
+
+.control label{
+  margin-left: 30px;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all .1s;
+}
+
+.control input:checked + label{
+  color: white;
+  background-color: #767676;
+}
+
+.control input:disabled + label{
+  color: #cbcbcb;
+}
+
+.box{
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid #ededed;
+  color: #767676;
+}
+
+.box .empty{
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
+  color: #767676;
+}
+
+.box header,
+.box footer{
+  height: 60px;
+  background-color: #dcdcdc;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#content{
+  margin: 10px 0;
+}
+#content #subs,
+#content #main,
+#content #aside{
+  padding: 10px;
+}
+
+#content #subs{
+  background-color: #cbcbcb;
+}
+
+#content #main{
+  background-color: #bababa;
+}
+
+#content #aside{
+  background-color: #a9a9a9;
+}
+
+/*两栏3/7布局 flex模式*/
+.TSF-flexL{
+  display: flex;
+  align-items: flex-start;
+}
+
+.TSF-flexL #subs{
+  width: 30%;
+}
+
+.TSF-flexL #main{
+  margin-left: 10px;
+  width: calc(70% - 10px)
+}
+
+/*两栏3/7布局 float模式*/
+.TSF-floatL{
+  overflow: auto;
+}
+
+.TSF-floatL #subs{
+  float: left;
+  width: 30%;
+}
+
+.TSF-floatL #main{
+  margin-left: calc(30% + 10px);
+}
+
+/*两栏3/7布局 position模式*/
+.TSF-inlineL{
+  font-size: 0;    /*去除元素换行带来的间距影响*/
+}
+.TSF-inlineL #subs,
+.TSF-inlineL #main{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.TSF-inlineL #subs{
+  width: 30%;
+}
+
+.TSF-inlineL #main{
+  margin-left: 10px;
+  width: calc(70% - 10px);
+}
+
+/*两栏左固定 flex布局*/
+.LF-flexL{
+  display: flex;
+  align-items: flex-start;
+}
+
+.LF-flexL #subs{
+  flex: none;
+  width: 300px;
+}
+.LF-flexL #main{
+  margin-left: 10px;
+  flex: auto;
+}
+
+/*两栏左固定 float布局*/
+.LF-floatL{
+  overflow: auto;
+}
+
+.LF-floatL #subs{
+  float: left;
+  width: 300px;
+}
+
+.LF-floatL #main{
+  margin-left: 310px;
+}
+
+/*两栏左固定 inlineBlock布局*/
+.LF-inlineL{
+  font-size: 0;
+}
+
+.LF-inlineL #subs,
+.LF-inlineL #main{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.LF-inlineL #subs{
+  width: 300px;
+}
+
+.LF-inlineL #main{
+  margin-left: 10px;
+  width: calc(100% - 310px);
+}
+
+/*两栏右固定 flex布局*/
+.RF-flexL{
+  display: flex;
+  align-items: flex-start;
+}
+
+.RF-flexL #main{
+  flex: auto;
+  margin-right: 10px;
+}
+
+.RF-flexL #subs{
+  flex: none;
+  width: 300px;
+}
+
+/*两栏右固定 float布局*/
+.RF-floatL{
+  overflow: auto;
+}
+
+.RF-floatL #main{
+  float: left;
+  width: calc(100% - 310px);
+}
+
+.RF-floatL #subs{
+  float: left;
+  width: 300px;
+  margin-left: 10px;
+}
+
+/*两栏右固定 inlineBlock布局*/
+.RF-inlineL{
+  font-size: 0;
+}
+
+.RF-inlineL #subs,
+.RF-inlineL #main{
+  font-size: 16px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.RF-inlineL #main{
+  width: calc(100% - 310px);
+}
+.RF-inlineL #subs{
+  margin-left: 10px;
+  width: 300px;
+}
+
+/*三栏左右固定 flex布局*/
+.LRF-flexL{
+  display: flex;
+  align-items: flex-start;
+}
+
+.LRF-flexL #subs{
+  flex: none;
+  width: 200px;
+}
+
+.LRF-flexL #main{
+  margin: 0 10px;
+  flex: auto;
+}
+
+.LRF-flexL #aside{
+  flex: none;
+  width: 250px;
+}
+
+/*三栏左右固定 float布局*/
+.LRF-floatL{
+  padding: 0 260px 0 210px;
+  overflow: auto;
+}
+
+.LRF-floatL #subs,
+.LRF-floatL #main,
+.LRF-floatL #aside{
+  float: left;
+  position: relative;
+}
+
+.LRF-floatL #subs{
+  width: 200px;
+  margin-left: -100%;
+  right: 210px;
+}
+
+.LRF-floatL #main{
+  width: 100%;
+}
+
+.LRF-floatL #aside{
+  width: 250px;
+  margin-left: -250px;
+  left: 260px;
+}
+
+/*三栏左右固定inlineBlock布局*/
+.LRF-inlineL{
+  font-size: 0;
+}
+
+.LRF-inlineL #subs,
+.LRF-inlineL #main,
+.LRF-inlineL #aside{
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.LRF-inlineL #subs{
+  width: 200px;
+}
+
+.LRF-inlineL #main{
+  margin: 0 10px;
+  width: calc(100% - 470px);
+}
+
+.LRF-inlineL #aside{
+  width: 250px;
+}
+
+/*三栏左中固定flex布局*/
+.LCF-flexL{
+  display: flex;
+  align-items: flex-start;
+}
+
+.LCF-flexL #subs{
+  flex: none;
+  width: 200px;
+}
+
+.LCF-flexL #main{
+  margin: 0 10px;
+  flex: none;
+  width: 300px;
+}
+
+.LCF-flexL #aside{
+  flex: auto;
+}
+
+/*三栏左中固定float布局, 有bug，找不到原因
+.LCF-floatL{
+  padding: 0 310px 0 210px;
+  overflow: auto;
+}
+
+.LCF-floatL #subs,
+.LCF-floatL #main,
+.LCF-floatL #aside{
+  float: left;
+  position: relative;
+}
+
+.LCF-floatL #subs{
+  width: 200px;
+  margin-left: -100%;
+  left: -210px;
+}
+
+.LCF-floatL #main{
+  width: 300px;
+  margin-left: -300px;
+  left: 310px;
+}
+
+.LCF-floatL #aside{
+  width: 100%;
+}*/
+
+/*三栏左中固定 inlineBlock布局*/
+.LCF-inlineL{
+  font-size: 0;
+}
+
+.LCF-inlineL #subs,
+.LCF-inlineL #main,
+.LCF-inlineL #aside{
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.LCF-inlineL #subs{
+  width: 200px;
+}
+
+.LCF-inlineL #main{
+  width: 300px;
+  margin: 0 10px;
+}
+
+.LCF-inlineL #aside{
+  width: calc(100% - 520px);
+}
