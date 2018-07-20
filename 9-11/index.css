@@ -1,0 +1,485 @@
+* {
+  box-sizing: inherit;
+  transition: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+html,
+body {
+  min-width: 1600px;
+  transition: all .1s;
+  background-color: #f2f2f2; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat-ExtraLight'; }
+
+body > header,
+body > section,
+body > footer {
+  overflow: hidden; }
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url(Montserrat-ExtraLight.ttf); }
+header {
+  position: relative;
+  height: 1000px;
+  background: url(img/background1.png) center/cover no-repeat;
+  color: white; }
+  header .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    opacity: .65;
+    z-index: 0; }
+  header .container {
+    position: absolute;
+    width: 970px;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    header .container h2 {
+      margin-top: 215px;
+      text-align: center;
+      font-size: 6.2rem;
+      font-weight: lighter; }
+    header .container p {
+      margin: 80px auto 0;
+      width: 770px;
+      font-size: 2rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7); }
+    header .container .signUp {
+      margin-top: 100px;
+      height: 250px;
+      border: 1px solid rgba(255, 255, 255, 0.2); }
+      header .container .signUp h3 {
+        margin-top: 55px;
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: lighter; }
+      header .container .signUp p {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        text-transform: uppercase; }
+      header .container .signUp form {
+        margin-top: 45px;
+        text-align: center;
+        font-size: 0;
+        height: 50px; }
+        header .container .signUp form input {
+          margin-right: 30px;
+          height: 100%;
+          width: 290px;
+          background: transparent;
+          outline: none;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 3px;
+          color: white;
+          text-indent: 20px;
+          font-size: 1.4rem; }
+        header .container .signUp form input:focus {
+          border-color: rgba(255, 255, 255, 0.6); }
+        header .container .signUp form button {
+          width: 125px;
+          height: 100%;
+          text-transform: uppercase;
+          background-color: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 3px;
+          color: white;
+          font-size: 1.2rem;
+          outline: 0;
+          cursor: pointer; }
+        header .container .signUp form button:hover {
+          background-color: white;
+          color: #141414; }
+
+#feature1 {
+  color: #141414;
+  background-color: white; }
+  #feature1 h2 {
+    margin: 90px auto 0;
+    width: 540px;
+    font-size: 1.4rem;
+    text-align: center; }
+  #feature1 > p {
+    margin: 40px auto 0;
+    font-size: 4.2rem;
+    text-align: center;
+    width: 720px; }
+  #feature1 .container {
+    margin: 85px auto 30px;
+    width: 1020px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #feature1 .container .feature {
+      margin-bottom: 80px;
+      overflow: hidden; }
+      #feature1 .container .feature .icon {
+        float: left;
+        width: 100px;
+        height: 100%;
+        text-align: center; }
+        #feature1 .container .feature .icon img {
+          max-width: 100px;
+          max-height: 100%; }
+      #feature1 .container .feature .discribe {
+        margin-left: 100px;
+        width: 350px; }
+        #feature1 .container .feature .discribe h3 {
+          font-size: 2rem; }
+        #feature1 .container .feature .discribe p {
+          margin-top: 25px;
+          font-size: 1.6rem; }
+
+#feature2 {
+  position: relative;
+  background: url(img/background2.png) center/cover no-repeat;
+  height: 800px; }
+  #feature2 .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.65); }
+  #feature2 .container {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    #feature2 .container .discribe {
+      width: 980px;
+      margin: 0 auto;
+      color: white; }
+      #feature2 .container .discribe h2 {
+        margin-top: 180px;
+        font-size: 4.2rem;
+        width: 390px;
+        font-weight: lighter; }
+      #feature2 .container .discribe p {
+        margin-top: 45px;
+        width: 390px;
+        font-size: 1.8rem;
+        color: rgba(255, 255, 255, 0.7); }
+      #feature2 .container .discribe .button {
+        margin-top: 60px;
+        height: 60px;
+        display: flex; }
+      #feature2 .container .discribe a {
+        display: block;
+        width: 280px;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        background-color: transparent;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        line-height: 60px;
+        color: white;
+        outline: 0;
+        cursor: pointer;
+        font-size: 1.2rem; }
+      #feature2 .container .discribe a:hover {
+        background-color: white;
+        color: #141414; }
+      #feature2 .container .discribe a:first-of-type {
+        margin-right: 28px; }
+    #feature2 .container .graphic {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 644px;
+      height: 600px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px 0 0 30px; }
+      #feature2 .container .graphic img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%); }
+    #feature2 .container .graphic::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%); }
+
+#products {
+  background-color: white; }
+  #products h2 {
+    margin: 100px auto 0;
+    width: 920px;
+    font-size: 4.2rem;
+    font-weight: lighter;
+    text-align: center; }
+  #products .container {
+    margin: 40px auto 80px;
+    width: 1020px;
+    display: flex;
+    justify-content: space-around; }
+    #products .container .product {
+      width: 260px; }
+      #products .container .product a {
+        display: block;
+        text-decoration: none;
+        color: #141414; }
+        #products .container .product a img {
+          display: block;
+          margin: 50px auto 0; }
+        #products .container .product a p {
+          margin-top: 35px;
+          font-size: 1.6rem; }
+
+#learn {
+  margin-top: 2px;
+  padding: 30px 0 105px 0;
+  background-color: white; }
+  #learn > article {
+    margin: 80px auto 0;
+    width: 980px;
+    height: 350px; }
+    #learn > article a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      color: #141414; }
+      #learn > article a img {
+        height: 100%; }
+      #learn > article a .discribe {
+        width: 310px; }
+        #learn > article a .discribe h3 {
+          margin-top: 70px;
+          font-size: 2rem;
+          font-weight: bold; }
+        #learn > article a .discribe p {
+          margin-top: 30px;
+          font-size: 1.6rem;
+          overflow: hidden;
+          line-height: 28px;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          display: -webkit-box; }
+  #learn > article:nth-child(2n) > a {
+    flex-direction: row-reverse; }
+
+#team {
+  margin-top: 2px;
+  background-color: white;
+  text-align: center; }
+  #team h2 {
+    margin: 100px auto 0;
+    width: 640px;
+    font-size: 4.2rem;
+    font-weight: lighter; }
+  #team > p {
+    margin: 35px auto 0;
+    width: 700px;
+    font-size: 1.8rem;
+    line-height: 2.8rem; }
+  #team > .container {
+    margin: 60px auto 70px;
+    width: 970px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white; }
+    #team > .container > .member {
+      margin-bottom: 30px;
+      position: relative;
+      width: 470px;
+      height: 340px;
+      overflow: hidden; }
+      #team > .container > .member > .mask {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(20, 20, 20, 0.65); }
+      #team > .container > .member > .info-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none; }
+        #team > .container > .member > .info-container h3 {
+          margin: 110px auto 0;
+          font-size: 20px; }
+        #team > .container > .member > .info-container > p {
+          margin: 20px auto 0;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.4); }
+        #team > .container > .member > .info-container .contact {
+          margin: 35px auto 0;
+          display: flex;
+          justify-content: center; }
+          #team > .container > .member > .info-container .contact > a {
+            display: block;
+            width: 55px;
+            height: 55px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 28px;
+            text-decoration: none;
+            color: white; }
+          #team > .container > .member > .info-container .contact > a:not(:first-child) {
+            margin-left: 30px; }
+          #team > .container > .member > .info-container .contact > a:nth-child(1) {
+            background: url(img/Facebook-Icon.png) center no-repeat; }
+          #team > .container > .member > .info-container .contact > a:nth-child(2) {
+            background: url(img/Twitter-Icon.png) center no-repeat; }
+          #team > .container > .member > .info-container .contact > a:nth-child(3) {
+            background: url(img/Instagram-Icon.png) center no-repeat; }
+    #team > .container > .member:nth-child(1) {
+      background: url(img/person1.png) center/cover no-repeat; }
+    #team > .container > .member:nth-child(2) {
+      background: url(img/person2.png) center/cover no-repeat; }
+    #team > .container > .member:nth-child(3) {
+      background: url(img/person3.png) center/cover no-repeat; }
+    #team > .container > .member:nth-child(4) {
+      background: url(img/person4.png) center/cover no-repeat; }
+    #team > .container > .member:hover {
+      cursor: pointer; }
+    #team > .container > .member:hover > .mask {
+      display: block; }
+    #team > .container > .member:hover > .info-container {
+      display: block; }
+
+#contact {
+  margin-top: 2px;
+  padding: 70px 0;
+  background-color: white; }
+  #contact .container {
+    width: 970px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; }
+    #contact .container form {
+      padding: 35px 50px 65px 50px;
+      width: 470px;
+      border: 1px solid rgba(20, 20, 20, 0.3);
+      border-radius: 5px;
+      color: rgba(20, 20, 20, 0.3); }
+      #contact .container form h3 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 4.2rem;
+        color: #141414; }
+      #contact .container form input,
+      #contact .container form textarea,
+      #contact .container form button {
+        margin-top: 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(20, 20, 20, 0.3);
+        outline: 0;
+        border-radius: 3px; }
+      #contact .container form input {
+        width: 100%;
+        height: 50px;
+        text-indent: 10px; }
+      #contact .container form input:focus {
+        border: 1px solid rgba(20, 20, 20, 0.6); }
+      #contact .container form textarea {
+        width: 100%;
+        height: 90px;
+        padding: 10px;
+        resize: none; }
+      #contact .container form textarea:focus {
+        border: 1px solid rgba(20, 20, 20, 0.6); }
+      #contact .container form button {
+        width: 100%;
+        height: 50px;
+        text-transform: uppercase; }
+      #contact .container form button:hover {
+        background-color: #141414;
+        color: white; }
+    #contact .container .discribe {
+      width: 360px; }
+      #contact .container .discribe > h3 {
+        margin-top: 85px;
+        font-size: 4.2rem;
+        font-weight: lighter; }
+      #contact .container .discribe p {
+        font-size: 1.6rem;
+        line-height: 2rem; }
+      #contact .container .discribe > .detail {
+        margin-top: 30px;
+        color: rgba(20, 20, 20, 0.75); }
+      #contact .container .discribe .address,
+      #contact .container .discribe .phone,
+      #contact .container .discribe .email {
+        position: relative;
+        margin-top: 30px;
+        margin-left: 50px;
+        font-weight: bold;
+        min-height: 30px; }
+      #contact .container .discribe .address {
+        margin-top: 50px; }
+      #contact .container .discribe .address::before,
+      #contact .container .discribe .phone::before,
+      #contact .container .discribe .email::before {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        content: '';
+        left: -50px; }
+      #contact .container .discribe .address::before {
+        background: url(img/Map-Icon.png) 10px 3px no-repeat; }
+      #contact .container .discribe .phone::before {
+        background: url(img/Phone-Icon.png) 10px 3px no-repeat; }
+      #contact .container .discribe .email::before {
+        background: url(img/Mail-Icon.png) 10px 5px no-repeat; }
+
+footer {
+  background-color: #141414;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 2.1rem; }
+  footer .container {
+    margin: 80px auto 120px;
+    width: 1180px;
+    display: flex;
+    justify-content: space-between; }
+    footer .container > div {
+      width: 265px; }
+      footer .container > div h3 {
+        text-transform: uppercase;
+        font-size: 1.4rem; }
+      footer .container > div > a,
+      footer .container > div > p {
+        display: block;
+        margin-top: 25px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.3); }
+      footer .container > div .icon {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        opacity: .3; }
+        footer .container > div .icon > a {
+          display: block;
+          margin-right: 25px; }
+
+/*# sourceMappingURL=index.css.map */
