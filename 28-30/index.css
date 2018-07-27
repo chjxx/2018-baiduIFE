@@ -1,0 +1,45 @@
+* {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 250px;
+  margin: 0 auto;
+}
+.wrapper #email-input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.wrapper #email-input:focus {
+  border: 1px solid #555;
+}
+.wrapper #email-sug-wrapper {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+}
+.wrapper #email-sug-wrapper li {
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  height: 34px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.wrapper #email-sug-wrapper li.selected {
+  background-color: #ededed;
+}
+.wrapper #email-sug-wrapper li:hover {
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=index.css.map */
