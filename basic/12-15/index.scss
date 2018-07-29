@@ -66,6 +66,7 @@ body{
     overflow: hidden; //隐藏滚动条用
     .inner_wraper{
       height: 100%; //隐藏滚动条用
+      width: calc(100% + 20px);
       position: absolute; //隐藏滚动条用
       left: 0; //隐藏滚动条用
       overflow-x: hidden; //隐藏滚动条用
@@ -155,6 +156,7 @@ body{
     .inner_wrapper{
       position: absolute;
       left: 0;
+      width: calc(100% + 20px);
       height: 100%;
       overflow-x: hidden;
       overflow-y: auto;
@@ -363,6 +365,7 @@ body{
           position: absolute;
           left: 0;
           top: 0;
+          width: calc(100% + 20px);
           height: 100%;
           overflow-x: hidden;
           overflow-y: auto;
