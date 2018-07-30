@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}* {
+  box-sizing: inherit;
+  transition: inherit; }
+
+html, body {
+  background-color: #f7f7f7;
+  min-width: 680px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  transition: all .05s; }
+
+.sel_box {
+  margin: 20px;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #656565; }
+  .sel_box > div {
+    display: flex;
+    padding: 10px; }
+    .sel_box > div .tt {
+      width: 120px;
+      text-align: right;
+      line-height: 30px;
+      font-weight: bold;
+      color: #656565; }
+    .sel_box > div .item,
+    .sel_box > div .all_btn,
+    .sel_box > div .item_seld,
+    .sel_box > div .all_btn_seld {
+      margin-left: 10px;
+      padding: 0 15px;
+      line-height: 30px;
+      border-radius: 10px;
+      color: #656565;
+      text-decoration: none; }
+    .sel_box > div .all_btn,
+    .sel_box > div .all_btn_seld {
+      margin-left: 30px; }
+    .sel_box > div .item:hover,
+    .sel_box > div .all_btn:hover {
+      background-color: #32f2df;
+      color: #fff; }
+    .sel_box > div .item_seld,
+    .sel_box > div .all_btn_seld {
+      background-color: #21e1ce;
+      color: #fff; }
+  .sel_box > div:not(:last-child) {
+    border-bottom: 1px solid #f3f3f3; }
+
+.table_box {
+  margin: 20px;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.6rem; }
+  .table_box > table {
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+    table-layout: auto;
+    width: 80%;
+    margin: 0 auto; }
+    .table_box > table th, .table_box > table td {
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ccc; }
+    .table_box > table th {
+      font-weight: bold; }

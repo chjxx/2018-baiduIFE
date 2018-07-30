@@ -1,5 +1,4 @@
 import '../style/index.scss';
-import '../index.html';
 import data from './data.js';
 import Model from './model.js';
 import Checkbox from './checkbox.js';
