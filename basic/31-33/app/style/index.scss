@@ -1,0 +1,95 @@
+@import 'reset.css';
+
+* {
+  box-sizing: inherit;
+  transition: inherit;
+}
+
+html,body{
+  background-color: #f7f7f7;
+  min-width: 680px;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+  transition: all .05s;
+}
+
+.sel_box{
+  margin: 20px;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #656565;
+  >div{
+    $btn_height: 30px;
+    display: flex;
+    padding: 10px;
+    .tt{
+      width: 120px;
+      text-align: right;
+      line-height: $btn_height;
+      font-weight: bold;
+      color: #656565;
+    }
+    .item,
+    .all_btn,
+    .item_seld,
+    .all_btn_seld{
+      margin-left: 10px;
+      padding: 0 15px;
+      line-height: $btn_height;
+      border-radius: 10px;
+      color: #656565;
+      text-decoration: none;
+    }
+    .all_btn,
+    .all_btn_seld{
+      margin-left: 30px;
+    }
+    .item:hover,
+    .all_btn:hover{
+      background-color: #32f2df;
+      color: #fff;
+    }
+    .item_seld,
+    .all_btn_seld{
+      background-color: #21e1ce;
+      color: #fff;
+    }
+  }
+  >div:not(:last-child){
+    border-bottom: 1px solid #f3f3f3;
+  }
+}
+
+.table_box{
+  margin: 20px;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  >table{
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+    table-layout: auto;
+    width: 80%;
+    margin: 0 auto;
+    th,td{
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+    }
+    th{
+      font-weight: bold;
+    }
+  }
+}
