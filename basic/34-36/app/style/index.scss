@@ -1,0 +1,180 @@
+@import 'reset.css';
+
+* {
+  box-sizing: inherit;
+  transition: inherit;
+}
+
+html,body{
+  background-color: #f7f7f7;
+  min-width: 680px;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: all .05s;
+}
+
+.check-box{
+  margin: 20px auto;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #656565;
+  min-width: 980px;
+  max-width: 1380px;
+  >div{
+    $btn_height: 30px;
+    display: flex;
+    padding: 10px;
+    .title{
+      width: 120px;
+      text-align: right;
+      line-height: $btn_height;
+      font-weight: bold;
+      color: #656565;
+    }
+    .option,
+    .check-all,
+    .option_chosen,
+    .check-all_chosen{
+      margin-left: 10px;
+      padding: 0 15px;
+      line-height: $btn_height;
+      border-radius: 10px;
+      color: #656565;
+      text-decoration: none;
+    }
+    .check-all,
+    .check-all_chosen{
+      margin-left: 30px;
+    }
+    .option:hover,
+    .check-all:hover{
+      background-color: #32f2df;
+      color: #fff;
+    }
+    .option_chosen,
+    .check-all_chosen{
+      background-color: #21e1ce;
+      color: #fff;
+    }
+  }
+  >div:not(:last-child){
+    border-bottom: 1px solid #f3f3f3;
+  }
+}
+
+.show-box{
+  min-width: 980px;
+  max-width: 1380px;
+  margin: 20px auto;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  .chart-box{
+    display: flex;
+    justify-content: center;
+    padding: 0 100px;
+    .bar,
+    .line{
+      position: relative;
+      width: 520px;
+      border: 1px solid #ccc;
+    }
+    .bar::before,
+    .line::before{
+      display: block;
+      content: '';
+      padding-top: 50%;
+    }
+    >div:not(:first-child){
+      margin-left: 20px;
+    }
+    .bar{
+      svg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .axis-line{
+          stroke: #666;
+        }
+        .axis-dashed-line{
+          stroke: #ccc;
+          fill: none;
+        }
+        .y-axis-text{
+          fill: #666;
+          font-size: 1.8rem;
+        }
+        .x-axis-text{
+          font-size: 1.8rem;
+          fill: #666;
+        }
+        .chart-bar{
+          fill: #21e1ce;
+        }
+        .category{
+          fill: #666;
+        }
+      }
+    }
+    .line{
+      canvas{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      canvas.hide{
+        display: none;
+      }
+    }
+  }
+  .table-box{
+    margin-top: 30px;
+    >table{
+      border-collapse: collapse;
+      border: 2px solid #ccc;
+      color: #333;
+      table-layout: auto;
+      width: 80%;
+      margin: 0 auto;
+      th,td{
+        height: 35px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+      }
+      thead{
+        th{
+          font-weight: bold;
+          background-color: hsl(174, 85%, 88%);
+        }
+      }
+      tbody{
+        tr{
+          th{
+            font-weight: bold;
+          }
+        }
+        tr:hover th,
+        tr:hover td{
+          background-color: hsl(174, 85%, 92%);
+        }
+      }
+    }
+  }
+}
