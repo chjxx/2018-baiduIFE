@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}* {
+  box-sizing: inherit;
+  transition: inherit; }
+
+html, body {
+  background-color: #f7f7f7;
+  min-width: 680px; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: all .05s; }
+
+.check-box {
+  margin: 20px auto;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #656565;
+  min-width: 980px;
+  max-width: 1380px; }
+  .check-box > div {
+    display: flex;
+    padding: 10px; }
+    .check-box > div .title {
+      width: 120px;
+      text-align: right;
+      line-height: 30px;
+      font-weight: bold;
+      color: #656565; }
+    .check-box > div .option,
+    .check-box > div .check-all,
+    .check-box > div .option_chosen,
+    .check-box > div .check-all_chosen {
+      margin-left: 10px;
+      padding: 0 15px;
+      line-height: 30px;
+      border-radius: 10px;
+      color: #656565;
+      text-decoration: none; }
+    .check-box > div .check-all,
+    .check-box > div .check-all_chosen {
+      margin-left: 30px; }
+    .check-box > div .option:hover,
+    .check-box > div .check-all:hover {
+      background-color: #32f2df;
+      color: #fff; }
+    .check-box > div .option_chosen,
+    .check-box > div .check-all_chosen {
+      background-color: #21e1ce;
+      color: #fff; }
+  .check-box > div:not(:last-child) {
+    border-bottom: 1px solid #f3f3f3; }
+
+.show-box {
+  min-width: 980px;
+  max-width: 1380px;
+  margin: 20px auto;
+  background-color: #fefefe;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.6rem; }
+  .show-box .chart-box {
+    display: flex;
+    justify-content: center;
+    padding: 0 100px; }
+    .show-box .chart-box .bar,
+    .show-box .chart-box .line {
+      position: relative;
+      width: 520px;
+      border: 1px solid #ccc; }
+    .show-box .chart-box .bar::before,
+    .show-box .chart-box .line::before {
+      display: block;
+      content: '';
+      padding-top: 50%; }
+    .show-box .chart-box > div:not(:first-child) {
+      margin-left: 20px; }
+    .show-box .chart-box .bar svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+      .show-box .chart-box .bar svg .axis-line {
+        stroke: #666; }
+      .show-box .chart-box .bar svg .axis-dashed-line {
+        stroke: #ccc;
+        fill: none; }
+      .show-box .chart-box .bar svg .y-axis-text {
+        fill: #666;
+        font-size: 1.8rem; }
+      .show-box .chart-box .bar svg .x-axis-text {
+        font-size: 1.8rem;
+        fill: #666; }
+      .show-box .chart-box .bar svg .chart-bar {
+        fill: #21e1ce; }
+      .show-box .chart-box .bar svg .category {
+        fill: #666; }
+    .show-box .chart-box .line canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+    .show-box .chart-box .line canvas.hide {
+      display: none; }
+  .show-box .table-box {
+    margin-top: 30px;
+    position: relative; }
+    .show-box .table-box table {
+      border-collapse: collapse;
+      border: 2px solid #ccc;
+      color: #333;
+      table-layout: auto;
+      width: 80%;
+      margin: 0 auto; }
+      .show-box .table-box table th, .show-box .table-box table td {
+        height: 35px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ccc; }
+      .show-box .table-box table thead th {
+        font-weight: bold;
+        background-color: #c6faf5; }
+      .show-box .table-box table tbody tr th {
+        font-weight: bold; }
+      .show-box .table-box table tbody tr td {
+        position: relative; }
+        .show-box .table-box table tbody tr td span {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          line-height: 35px; }
+        .show-box .table-box table tbody tr td i {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          color: white;
+          font-size: 1rem;
+          cursor: pointer;
+          background-color: #666; }
+        .show-box .table-box table tbody tr td i:hover {
+          background-color: #333; }
+        .show-box .table-box table tbody tr td i.finish_show {
+          display: block; }
+      .show-box .table-box table tbody tr td:hover i.edit {
+        display: block; }
+      .show-box .table-box table tbody tr:hover th,
+      .show-box .table-box table tbody tr:hover td {
+        background-color: #d9fcf8; }
+    .show-box .table-box .tips {
+      display: none;
+      padding: 10px 20px;
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 5px);
+      transform: translate(-50%);
+      background-color: darkred;
+      border-radius: 7px;
+      font-size: 1.8rem;
+      color: white; }
