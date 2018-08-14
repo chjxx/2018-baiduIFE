@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task 44-46</title>
+  <style>
+    body{
+      background-color: #ddd;
+    }
+    .msgContainer{
+      position: relative;
+      box-sizing: border-box;
+      width: 500px;
+      height: 700px;
+      margin: 50px auto 0;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 0 20px #666;
+      padding: 30px;
+      overflow: hidden;
+    }
+    .innerWrapper{
+      position: absolute;
+      height: 640px;
+      width: 100%;
+      left: 30px;
+      top: 30px;
+      overflow: auto;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      width: 440px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    li b{
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="msgContainer">
+    <div class="innerWrapper">
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
