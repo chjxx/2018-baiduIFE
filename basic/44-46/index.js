@@ -94,7 +94,7 @@ class Restaurant{
     let restaurant = this;
 
     this.watch('becreated', ()=>{
-      restaurant.sendMessage('restaurant', 'The restaurant has be created!');
+      restaurant.sendMessage('restaurant', 'The restaurant has been created!');
     });
 
     this.watch('hireemployee', employee =>{
@@ -112,7 +112,7 @@ class Restaurant{
 
     this.watch('customerleave', restaurant =>{
       restaurant.sendMessage('restaurant', 'Customer has left!')
-      restaurant.sendMessage('restaurant', 'The seat empty!')
+      restaurant.sendMessage('restaurant', 'The seat is empty!')
       restaurant.seat.sitIn(restaurant.queue.shift());
     });
 
@@ -140,7 +140,7 @@ class Restaurant{
     this.watch('cookedfood', food =>{
       let waiter = restaurant.staff.getWaiter();
 
-      restaurant.sendMessage('restaurant', `The food ${food.name} has be cooked!`);
+      restaurant.sendMessage('restaurant', `The food ${food.name} has been cooked!`);
 
       waiter.work(restaurant, food);
     });
@@ -148,7 +148,7 @@ class Restaurant{
     this.watch('servedfood', food =>{
       let customer = restaurant.seat.getCustomer();
 
-      restaurant.sendMessage('restaurant', `Waiter has serve the food ${food.name}!`);
+      restaurant.sendMessage('restaurant', `Waiter has served the food ${food.name}!`);
 
       customer.eat(restaurant, food);
     });
