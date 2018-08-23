@@ -30,7 +30,7 @@ const timeUnit = {
     toKitchen: 1.5,
     toTable: [1.5]
   },
-  msgTime: 1.5
+  msgTime: 2
 }
 
 const words = {
