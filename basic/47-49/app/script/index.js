@@ -27,32 +27,32 @@ const foodMenu = [
 ];
 
 let customerImg = [
-  '../images/customer1.jpg',
-  '../images/customer2.jpg',
-  '../images/customer3.jpg',
-  '../images/customer4.jpg',
-  '../images/customer5.jpg',
-  '../images/customer6.jpg',
-  '../images/customer7.jpg',
-  '../images/customer8.jpg',
-  '../images/customer9.jpg',
-  '../images/customer10.jpg',
-  '../images/customer11.jpg',
-  '../images/customer12.jpg',
-  '../images/customer13.jpg',
-  '../images/customer14.jpg'
+  './images/customer1.jpg',
+  './images/customer2.jpg',
+  './images/customer3.jpg',
+  './images/customer4.jpg',
+  './images/customer5.jpg',
+  './images/customer6.jpg',
+  './images/customer7.jpg',
+  './images/customer8.jpg',
+  './images/customer9.jpg',
+  './images/customer10.jpg',
+  './images/customer11.jpg',
+  './images/customer12.jpg',
+  './images/customer13.jpg',
+  './images/customer14.jpg'
 ];
 
 let waiterInfo = {
   name: 'Hinako',
   salary: 3000,
-  avatarUrl: '../images/waiter.png'
+  avatarUrl: './images/waiter.png'
 };
 
 let chefInfo = {
   name: 'Alice',
   salary: 10000,
-  avatarUrl: '../images/chef.png'
+  avatarUrl: './images/chef.png'
 };
 
 let restaurantInfo = {

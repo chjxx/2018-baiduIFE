@@ -94,7 +94,7 @@ class Customer{
         let randomIdx = getRandom(0, menu.length - 1);
         let orderedFood = menu[randomIdx];
 
-        let sameOrdered = customer.ordered.some(food=> food.name === orderedFood);
+        let sameOrdered = customer.ordered.some(food=> food.name === orderedFood.name);
         if(!sameOrdered){
           let copyFood = copyObject(orderedFood);
 

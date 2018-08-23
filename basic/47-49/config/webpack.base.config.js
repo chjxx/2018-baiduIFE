@@ -6,8 +6,6 @@ let SRC_PATH = path.resolve('./app');
 let ASSETS_PATH = path.resolve('./build');
 let HTML_PATH = path.resolve('./app/index.html');
 
-console.log(HTML_PATH)
-
 module.exports = {
   context: SRC_PATH,
   entry: './script/index.js',
