@@ -85,14 +85,14 @@ restaurant.start();
 
 let time,idx = 0;
 
-time = getRandom(1000, 8000);
+time = getRandom(3000, 8000);
 
 let timer = setInterval(()=>{
   idx = idx % customerImg.length;
   let customer = new Customer(customerImg[idx]);
   restaurant.addCustomer(customer);
   idx += 1;
-  time = getRandom(1000, 8000);
+  time = getRandom(3000, 8000);
 }, time);
 
 
