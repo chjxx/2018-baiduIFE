@@ -1,0 +1,272 @@
+@import './reset.css';
+
+*, ::before, ::after{
+  box-sizing: inherit;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  background-color: #888;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+}
+
+$bg_border-width: 8px;
+$bg_border: $bg_border-width solid #555;
+
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 640px;
+  background-color: #fff;
+  overflow: hidden;
+  .basic{
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond;
+    .innerWall{
+      position: absolute;
+      left: 12%;
+      top: 30%;
+      height: 55%;
+      border-left: $bg_border;
+      border-radius: 10px;
+    }
+    .kitchen{
+      $radius_width: 20px;
+      position: absolute;
+      right: $bg_border-width;
+      top: $bg_border-width;
+      width: 30%;
+      height: 20%;
+      background-color: rgb(122, 64, 12);
+      border-bottom-left-radius: $radius_width;
+      display: flex;
+      .work-place{
+        position: relative;
+        width: 50%;
+      }
+      .cookList{
+        $title_height: 25px;
+        position: relative;
+        width: 50%;
+        background-color: #ccc;
+        overflow: hidden;
+        .title{
+          height: $title_height;
+          line-height: $title_height;
+          padding: 0 5px;
+          background-color: #333;
+          color: #ddd;
+        }
+        .wrapper{
+          position: absolute;
+          width: calc(100% + 20px);
+          height: 100%;
+          left: 0;
+          top: $title_height;
+          overflow-x: hidden;
+          overflow-y: auto;
+          ul{
+            width: 100%;
+            background-color: #666633;
+          }
+          li{
+            $height: 20px;
+            height: $height;
+            padding: 0 5px;
+            line-height: $height;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: ghostwhite;
+          }
+        }
+
+      }
+      .state{
+        $height: 25px;
+        position: absolute;
+        left: $radius_width;
+        top: 100%;
+        height: $height;
+        width: calc(100% - 20px);
+        padding: 0 10px;
+        background-color: #FF9900;
+        line-height: $height;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        .thing{
+          flex: 1 1 auto;
+        }
+        .time{
+          flex: 0 0 50px;
+        }
+      }
+    }
+    .table{
+      position: absolute;
+      left: 50%;
+      top: 79%;
+      width: 16%;
+      height: 15%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(133, 196, 49);
+      border-radius: 10px;
+      .list{
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        list-style:none;
+        font-size: 1.4rem;
+        li{
+          padding: 5px;
+          display: flex;
+          border: 1px solid #ddd;
+          color: #333;
+          span{
+            flex: 1 1 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          i{
+            flex: 0 0 40%;
+            text-align: right;
+          }
+        }
+        li:not(:last-child){
+          border-bottom-color: transparent;
+        }
+        li:first-child{
+          border-radius: 10% 10% 0 0;
+        }
+        li:last-child{
+          border-radius: 0 0 10% 10%;
+        }
+        li.serving{
+          background-color: orange
+        }
+        li.served{
+          background-color: red;
+        }
+        li.eated{
+          background-color: #999;
+        }
+      }
+    }
+    .seat{
+      position: absolute;
+      left: 50%;
+      top: 92%;
+      width: 5%;
+      height: 6.25%;
+      transform: translate(-50%, -50%);
+      background-color: green;
+      border-radius: 50%;
+    }
+    .cash-bar{
+      position: absolute;
+      left: 45%;
+      top: $bg_border-width;
+      min-width: 5%;
+      background-color: orange;
+      transform: translate(-50%);
+      padding: 10px 15px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      border-radius: 0 0 10% 10%;
+      color: white;
+    }
+  }
+  .basic::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    border-top: $bg_border;
+    border-right: $bg_border;
+    border-bottom: $bg_border-width solid transparent;
+  }
+  .basic::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    border-bottom: $bg_border;
+    border-left: $bg_border;
+    border-top: $bg_border-width solid transparent;
+  }
+  .man{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .employees{
+      .waiter{
+        position: absolute;
+        width: 6.4%;
+        height: 8%;
+        background: center/cover no-repeat;
+        border-radius: 10%;
+      }
+      .chef{
+        position: absolute;
+        width: 6.4%;
+        height: 8%;
+        background: center/cover no-repeat;
+        border-radius: 10%;
+      }
+    }
+    .customers{
+      .customer{
+        position: absolute;
+        width: 6.4%;
+        height: 8%;
+        background: center/cover no-repeat;
+        border-radius: 10%;
+      }
+    }
+  }
+}
+.msg{
+  position: absolute;
+  left: 0;
+  top: -30px;
+  height: 24px;
+  min-width: 40px;
+  padding: 0 10px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 3px 3px 3px 3px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+.msg::before{
+  position: absolute;
+  content: '';
+  display: block;
+  left: 5px;
+  top: calc(100% - 1px);
+  border-top: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
