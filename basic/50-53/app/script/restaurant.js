@@ -54,7 +54,7 @@ class Restaurant{
 
     this.watch('open', ()=>{
       let idx = 0;
-      let time = getRandom(3000, 4000);
+      let time = getRandom(2000, 4000);
 
       setInterval(()=>{
         idx += 1;

@@ -90,21 +90,24 @@ class Waiter extends Staff{
       await self.serveFood(food);
       self.say('served', food.name);
       self.waiting();
+      self.emit('checkselfstate');
       restaurant.emit('served', food);
-      self.emit('checktask');
     });
 
     this.watch('checkout',async (customer)=>{
       self.working();
       await self.checkout(customer);
       self.waiting();
+      self.emit('checkselfstate');
+      restaurant.emit('checkout', customer);
+    });
+
+    this.watch('checkselfstate', ()=>{
       if(self.befired){
         self.quit();
       }else{
         self.emit('checktask');
       }
-
-      restaurant.emit('checkout', customer);
     });
   }
   say(type, ...args){
@@ -223,13 +226,16 @@ class Chef extends Staff{
 
       self.say('remind', food.name);
       self.waiting();
+      self.emit('checkselfstate');
+      restaurant.emit('cooked', food, chefIndex);
+    });
+
+    this.watch('checkselfstate', ()=>{
       if(self.befired){
         self.quit();
       }else{
         self.emit('checktask');
       }
-
-      restaurant.emit('cooked', food, chefIndex);
     });
   }
   say(type, ...args){
