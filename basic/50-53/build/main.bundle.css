@@ -1,0 +1,359 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}*, ::before, ::after {
+  box-sizing: inherit; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #888; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 800px;
+  background-color: #fff; }
+  .container .basic {
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond; }
+    .container .basic .innerWall {
+      position: absolute;
+      left: 12%;
+      top: 30%;
+      height: 55%;
+      border-left: 8px solid #555;
+      border-radius: 10px; }
+    .container .basic .kitchen {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      height: 16%;
+      background-color: #7a400c;
+      display: flex; }
+      .container .basic .kitchen .work-place-list {
+        display: flex; }
+        .container .basic .kitchen .work-place-list .work-place {
+          position: relative;
+          width: 130px;
+          height: 100%;
+          border: 1px solid #227722; }
+          .container .basic .kitchen .work-place-list .work-place .state {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            height: 25px;
+            width: 130px;
+            padding: 0 5px;
+            background-color: #FF9900;
+            line-height: 25px;
+            border-radius: 0 0 5px 5px;
+            display: flex; }
+            .container .basic .kitchen .work-place-list .work-place .state .thing {
+              flex: 1 1 auto;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap; }
+            .container .basic .kitchen .work-place-list .work-place .state .time {
+              flex: 0 0 30px; }
+      .container .basic .kitchen .cookList {
+        position: relative;
+        width: 100px;
+        height: 100%;
+        background-color: #eee;
+        overflow: hidden; }
+        .container .basic .kitchen .cookList .title {
+          height: 25px;
+          line-height: 25px;
+          padding: 0 5px;
+          background-color: #333;
+          color: #ddd; }
+        .container .basic .kitchen .cookList .wrapper {
+          position: absolute;
+          width: calc(100% + 20px);
+          height: 100%;
+          left: 0;
+          top: 25px;
+          overflow-x: hidden;
+          overflow-y: auto; }
+          .container .basic .kitchen .cookList .wrapper ul {
+            width: 100%;
+            background-color: #666633; }
+          .container .basic .kitchen .cookList .wrapper li {
+            height: 20px;
+            padding: 0 5px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: ghostwhite; }
+    .container .basic .place-list {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .container .basic .place-list .place {
+        position: absolute;
+        width: 14%;
+        height: 20%;
+        top: 75.8%; }
+        .container .basic .place-list .place .table {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 65%;
+          background-color: #85c431;
+          border-radius: 10px; }
+          .container .basic .place-list .place .table .state {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            overflow: hidden;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            white-space: nowrap; }
+          .container .basic .place-list .place .table .list {
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            width: 100%;
+            list-style: none;
+            font-size: 1.4rem; }
+            .container .basic .place-list .place .table .list li {
+              padding: 5px;
+              display: flex;
+              border: 1px solid #ddd;
+              color: #333; }
+              .container .basic .place-list .place .table .list li span {
+                flex: 1 1 auto;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis; }
+              .container .basic .place-list .place .table .list li i {
+                flex: 0 0 40%;
+                text-align: right; }
+            .container .basic .place-list .place .table .list li:not(:last-child) {
+              border-bottom-color: transparent; }
+            .container .basic .place-list .place .table .list li:first-child {
+              border-radius: 10% 10% 0 0; }
+            .container .basic .place-list .place .table .list li:last-child {
+              border-radius: 0 0 10% 10%; }
+            .container .basic .place-list .place .table .list li.serving {
+              background-color: orange; }
+            .container .basic .place-list .place .table .list li.served {
+              background-color: red; }
+            .container .basic .place-list .place .table .list li.eated {
+              background-color: #999; }
+        .container .basic .place-list .place .seat {
+          position: absolute;
+          left: 50%;
+          top: 88%;
+          width: 30px;
+          height: 30px;
+          transform: translate(-50%, -50%);
+          background-color: green;
+          border-radius: 50%; }
+      .container .basic .place-list .place:nth-child(1) {
+        left: 20%; }
+      .container .basic .place-list .place:nth-child(2) {
+        left: 40%; }
+      .container .basic .place-list .place:nth-child(3) {
+        left: 60%; }
+      .container .basic .place-list .place:nth-child(4) {
+        left: 80%; }
+    .container .basic .cash-bar {
+      position: absolute;
+      left: 38%;
+      top: 8px;
+      min-width: 5%;
+      background-color: orange;
+      transform: translate(-50%);
+      padding: 10px 15px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      border-radius: 0 0 10% 10%;
+      color: white; }
+  .container .basic::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    border-top: 8px solid #555;
+    border-right: 8px solid #555;
+    border-bottom: 8px solid transparent; }
+  .container .basic::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    border-bottom: 8px solid #555;
+    border-left: 8px solid #555;
+    border-top: 8px solid transparent; }
+  .container .man {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .container .man .employees .waiter {
+      position: absolute;
+      width: 5%;
+      height: 6.25%;
+      background: center/cover no-repeat;
+      border-radius: 10%; }
+    .container .man .employees .chef {
+      position: absolute;
+      width: 5%;
+      height: 6.25%;
+      background: center/cover no-repeat;
+      border-radius: 10%; }
+    .container .man .customers .customer {
+      position: absolute;
+      width: 5%;
+      height: 6.25%;
+      background: center/cover no-repeat;
+      border-radius: 10%; }
+  .container .restaurant-state {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 170px;
+    height: 100%;
+    background-color: #7a400c;
+    border: 2px solid #5a1e0c;
+    display: flex;
+    flex-direction: column; }
+    .container .restaurant-state .state {
+      font-size: 1.6rem;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #bbdd11;
+      background-color: #5a1e0c; }
+    .container .restaurant-state .employees {
+      flex: 1 1 auto;
+      overflow: hidden; }
+      .container .restaurant-state .employees li {
+        background-color: #96640c;
+        height: 50px;
+        display: flex; }
+        .container .restaurant-state .employees li .avatar {
+          width: 50px;
+          height: 50px;
+          background: center/cover no-repeat; }
+        .container .restaurant-state .employees li .detail {
+          margin-left: 5px;
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column; }
+          .container .restaurant-state .employees li .detail p {
+            flex: 1 1 auto;
+            line-height: 25px; }
+          .container .restaurant-state .employees li .detail .fire {
+            height: 25px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 25px;
+            background-color: #78500c;
+            color: black; }
+          .container .restaurant-state .employees li .detail .fire:hover {
+            background-color: #643c0c; }
+    .container .restaurant-state .control {
+      display: flex;
+      flex-direction: column; }
+      .container .restaurant-state .control a {
+        color: white;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #5a1e0c; }
+      .container .restaurant-state .control a:not(:first-child) {
+        border-top: 1px solid #7a400c; }
+      .container .restaurant-state .control a:hover {
+        background-color: #ccc;
+        background-color: #96780c; }
+
+.msg {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  height: 24px;
+  min-width: 40px;
+  padding: 0 10px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 3px 3px 3px 3px;
+  line-height: 24px;
+  white-space: nowrap; }
+
+.msg::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 5px;
+  top: calc(100% - 1px);
+  border-top: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent; }
