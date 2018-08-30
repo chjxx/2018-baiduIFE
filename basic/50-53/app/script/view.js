@@ -302,91 +302,35 @@ export default class View{
 }
 
 function uniformSpeedMove($elm, position, speed, callback){
-  if(!speed){
-    speed = 15;
-  }
-  let prevX = parseFloat(getComputedStyle($elm).left);
-  let prevY = parseFloat(getComputedStyle($elm).top);
-
+  let startX = parseFloat(getComputedStyle($elm).left);
+  let startY = parseFloat(getComputedStyle($elm).top);
   let [destinationX, destinationY] = position;
-  let xDistance = destinationX - prevX;
-  let yDistance = destinationY - prevY;
-  let xAbsDistance = Math.abs(xDistance);
-  let yAbsDistance = Math.abs(yDistance);
-  let direction = {}, xSpeed = 0, ySpeed = 0;
-  let maxX = false, maxY = false;
+  let maxX = Math.abs(destinationX - startX);
+  let maxY = Math.abs(destinationY - startY);
+  let nowX = startX, nowY = startY;
 
-  if(xAbsDistance > yAbsDistance){
-    xSpeed = speed;
-    ySpeed = yAbsDistance / xAbsDistance * speed;
-  }else if(xAbsDistance === yAbsDistance){
-    if(xAbsDistance !== 0){
-      xSpeed = ySpeed = speed;
-    }
-  }else{
-    xSpeed = xAbsDistance / yAbsDistance * speed;
-    ySpeed = speed;
+  if(!speed){
+    speed = 10;
   }
-
-  if(xDistance > 0){
-    direction.x = 'right';
-  }else if(xDistance < 0){
-    direction.x = 'left';
-  }
-
-  if(yDistance > 0){
-    direction.y = 'bottom';
-  }else if(yDistance < 0){
-    direction.y = 'top';
-  }
-
 
   return requestAnimationFrame(function update(){
-    $elm.style.left = prevX + 'px';
-    $elm.style.top = prevY + 'px';
+    let angle = Math.atan2(destinationY - nowY, destinationX - nowX);
+    let offsetX = Math.cos(angle) * speed;
+    let offsetY = Math.sin(angle) * speed;
+    nowX = parseFloat(getComputedStyle($elm).left) + offsetX;
+    nowY = parseFloat(getComputedStyle($elm).top) + offsetY;
+    let sumOffsetX = Math.abs(nowX - startX);
+    let sumOffsetY = Math.abs(nowY - startY);
 
-    if(!maxX){
-      if(direction.x === 'right'){
-        if(prevX < destinationX){
-          prevX += xSpeed;
-        }else{
-          maxX = true;
-        }
-      }else if(direction.x === 'left'){
-        if(prevX > destinationX){
-          prevX -= xSpeed;
-        }else{
-          maxX = true;
-        }
-      }else{
-        maxX = true;
-      }
-    }
+    $elm.style.left = nowX + 'px';
+    $elm.style.top = nowY + 'px';
+    console.log( nowY)
+    if(maxX <= sumOffsetX && maxY <= sumOffsetY){
 
-    if(!maxY){
-      if(direction.y === 'bottom'){
-        if(prevY < destinationY){
-          prevY += ySpeed;
-        }else{
-          maxY = true;
-        }
-      }else if(direction.y === 'top'){
-        if(prevY > destinationY){
-          prevY -= ySpeed;
-        }else{
-          maxY = true;
-        }
-      }else{
-        maxY = true;
-      }
-    }
-
-    $elm.style.left = prevX + 'px';
-    $elm.style.top = prevY + 'px';
-    if(maxX && maxY){
       callback();
     }else{
       requestAnimationFrame(update);
     }
+
   });
 }
